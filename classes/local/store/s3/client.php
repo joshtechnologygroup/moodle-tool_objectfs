@@ -47,6 +47,7 @@ class client extends object_client_base {
     protected $client;
     protected $bucket;
     private $signingmethod;
+    private $bucketkeyprefix;
 
     public function __construct($config) {
         global $CFG;

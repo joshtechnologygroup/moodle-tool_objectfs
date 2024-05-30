@@ -115,7 +115,7 @@ abstract class manipulator implements object_manipulator {
         }
 
         $this->logger->end_timing();
-        $this->logger->output_move_statistics();
+        // $this->logger->output_move_statistics();
     }
 
     /**
