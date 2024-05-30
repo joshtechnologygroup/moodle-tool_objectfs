@@ -47,6 +47,7 @@ class client extends object_client_base {
     protected $client;
     protected $bucket;
     private $signingmethod;
+    private $bucketkeyprefix;
 
     public function __construct($config) {
         global $CFG;
@@ -422,9 +423,9 @@ class client extends object_client_base {
             new \lang_string('settings:aws:base_url', 'tool_objectfs'),
             new \lang_string('settings:aws:base_url_help', 'tool_objectfs'), ''));
 
-        // $settings->add(new \admin_setting_configtext('tool_objectfs/key_prefix',
-        //     new \lang_string('settings:aws:key_prefix', 'tool_objectfs'),
-        //     new \lang_string('settings:aws:key_prefix_help', 'tool_objectfs'), ''));
+        $settings->add(new \admin_setting_configtext('tool_objectfs/key_prefix',
+            new \lang_string('settings:aws:key_prefix', 'tool_objectfs'),
+            new \lang_string('settings:aws:key_prefix_help', 'tool_objectfs'), ''));
 
         return $settings;
     }
